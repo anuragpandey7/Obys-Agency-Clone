@@ -21,6 +21,17 @@ body {
   background-color: #030303;
 }
 
+#crsr {
+  height: 2.4vw;
+  width: 2.4vw;
+  border: 1px solid #ffffff98;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
 #loader {
   height: 100%;
   width: 100%;
@@ -77,12 +88,6 @@ body {
   background-color: #151515;
 }
 
-#page1 {
-  width: 100%;
-  height: 100vh;
-  background-color: #151515;
-}
-
 @keyframes nowAnime {
   0% {
     font-family: "Plain Light";
@@ -91,13 +96,12 @@ body {
     color: #fff;
     opacity: 1;
   }
-   45% {
+  45% {
     font-family: "Plain Light";
     -webkit-text-stroke: 0.1px #fff;
     font-weight: 500;
     color: #fff;
     opacity: 0;
-
   }
   50% {
     font-family: "Silk Serif";
@@ -113,4 +117,62 @@ body {
     color: transparent;
     opacity: 0;
   }
+}
+
+#page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #151515;
+}
+
+#page1 #nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 6vw;
+}
+
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+#nav-part2 h4 {
+  font-size: 1vw;
+  font-weight: 400;
+}
+
+.page1-center {
+  /* background-color: red; */
+  height: fit-content;
+  text-align: center;
+  width: 70%;
+  margin-left: 26%;
+  overflow: hidden;
+}
+
+#page1-center-data3 {
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.page1-center:nth-child(2) {
+  margin-top: 2vw;
+}
+
+.page1-center h1,
+#page1-center-data3 h2{
+  font-size: 7vw;
+  text-align: start;
+  line-height: 7.5vw;
+  text-transform: uppercase;
+}
+
+#page1-center-data3 h2:hover{
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+  font-weight: 500;
 }
