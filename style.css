@@ -16,7 +16,7 @@ body {
   width: 100%;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -126,7 +126,7 @@ body{
 
 #page1 {
   width: 100%;
-  height: 100vh;
+  height:100vh;
   background-color: #151515;
 }
 
@@ -174,6 +174,19 @@ body{
   text-align: start;
   line-height: 7.5vw;
   text-transform: uppercase;
+  position: relative;
+}
+
+#page1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Silk Serif";
+  font-style: italic;
+  z-index: 9999;
+  left: 17%;
+  top:21.9%;
+  font-weight: 100;
 }
 
 #page1-center-data3 h2 {
@@ -260,7 +273,19 @@ body{
   text-transform: uppercase;
 }
 
-#page4-content .underline {
+#page4-content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Silk Serif";
+  font-style: italic;
+  top: 1%;
+  left: -10%;
+  font-weight: 100;
+}
+
+#page4-content .underline,
+#footer .underline {
   width: 94%;
   height: 1px;
   background-color: #ffffff;
@@ -291,9 +316,9 @@ body{
   margin-left: 5vw;
 }
 
-#page4-over-blue{
+#page4-over-blue {
   width: 30vw;
-  background-color: #3F7DF4;
+  background-color: #3f7df4;
   padding: 2.5vw;
   position: relative;
   margin-top: -29vh;
@@ -308,20 +333,137 @@ body{
   border-bottom: 1.5px solid #ffffff94;
 }
 
-.blue-div-elem h4{
+.blue-div-elem h4 {
   font-size: 1.4vw;
   font-weight: 500;
 }
 
-.blue-div-elem p{
+.blue-div-elem p {
   width: 40%;
   font-size: 1vw;
   font-weight: 400;
 }
 
-#page5{
-  min-height: 100vh;
+#page5 {
+  min-height: fit-content;
   width: 100%;
-  background-color: #3F7DF4;
-  padding: 5vw 0;
+  position: relative;
+}
+
+.marque-elem {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -1vw;
+}
+
+.marque-elem h1 {
+  font-size: 6vw;
+  -webkit-text-stroke: 0.02vw #fff;
+  color: transparent;
+  font-weight: 100;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 16px;
+  /* background-color: red; */
+  animation-name: marqueAnime;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marque-elem2 {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: hidden;
+  margin-bottom: -1vw;
+}
+
+.marque-elem2 h1 {
+  font-size: 6vw;
+  -webkit-text-stroke: 0.02vw #fff;
+  color: transparent;
+  font-weight: 100;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 16px;
+  /* background-color: red; */
+  animation-name: marqueAnime;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+.marque-elem span,
+.marque-elem2 span {
+  font-style: italic;
+  font-family: "Silk Serif";
+  -webkit-text-stroke: 0.02vw #fff;
+  color: transparent;
+}
+
+@keyframes marqueAnime {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+#footer {
+  height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+  padding-left: 28vw;
+}
+#footer h1 {
+  width: 80%;
+  /* background-color: rgb(50, 209, 22); */
+  font-size: 7vw;
+  margin-top: 4vw;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3vw;
+  font-family: "Silk Serif";
+  font-style: italic;
+  top: 8%;
+  left: -17%;
+  font-weight: 100;
+}
+
+#social-to-connect {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#social-to-connect h5 {
+  font-size: 1vw;
+  margin-bottom: 2vw;
+}
+
+#social-to-connect .part h4 {
+  font-size: 2vw;
+  font-weight: 100;
+}
+
+#part3 {
+  padding-right: 5vw;
+}
+
+#social-email {
+  text-decoration: underline;
+}
+
+#copywrite {
+  font-size: 1.3vw;
+  font-weight: 100;
 }
