@@ -20,7 +20,7 @@ function loadingAnimation() {
         if (count === 100) {
           clearInterval(timerId);
         }
-      }, 30);
+      }, 25);
     },
   });
 
